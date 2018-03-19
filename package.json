@@ -1,0 +1,16 @@
+{
+  "name": "ts-node",
+  "version": "9.4.7",
+  "scripts": {
+    "start": "ts-node ./src/variables.ts && ts-node ./src/functional.programming.ts",
+    "run": "ts-node ./src/arrow.function.ts",
+    "test": "ts-node ./src/car/app.ts",
+    "prototype": "ts-node ./src/car/prototype.ts",
+    "posttest": "ts-node ./src/phone/app.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.7",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
+}
