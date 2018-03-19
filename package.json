@@ -6,7 +6,8 @@
     "run": "ts-node ./src/arrow.function.ts",
     "test": "ts-node ./src/car/app.ts",
     "prototype": "ts-node ./src/car/prototype.ts",
-    "posttest": "ts-node ./src/phone/app.ts"
+    "posttest": "ts-node ./src/phone/app.ts",
+    "generics": "ts-node ./src/generics/array.list.generic.class.example.ts"
   },
   "devDependencies": {
     "@types/node": "^9.4.7",
