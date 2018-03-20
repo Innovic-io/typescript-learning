@@ -29,10 +29,10 @@ s.push("q");
 console.log(...j);
 console.log(s===j); //true
 
-let a = 'test'; //immutable values(example: strings and numbers)
+let a = 'listOfStrings'; //immutable values(example: strings and numbers)
 let ba = a;
 a = a.substring(1);
-console.log(ba); //test
+console.log(ba); //listOfStrings
 console.log(a); //est */
 /*
 const [ first, second, last ] = list;

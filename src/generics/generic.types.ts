@@ -15,3 +15,22 @@ console.log(typeof myIdentity(50)); //number
 
 //a different name for the generic type parameter could be used, but "T" is a convention
 
+const sym = Symbol("symbol");
+const sym1 = Symbol("symbol");
+
+const str1 = "symbol";
+const str2 = "symbol";
+
+console.log(str1 === str2);
+
+class Symbolic {
+  [sym](){
+    return sym;
+  }
+}
+
+const nesto = new Symbolic();
+
+console.log(nesto[sym]());
+
+

@@ -1,5 +1,3 @@
-import { cpus } from 'os';
-
 class ArrayList<T> {
   private t = [];
 
@@ -45,23 +43,23 @@ class ArrayList<T> {
   }
 }
 
-const test = new ArrayList<string>();
+const listOfStrings = new ArrayList<string>();
 
-//test.add(1); //error
-test.add("a");
-test.add("b");
-test.add("c");
-test.add("d");
-test.add("e");
+//listOfStrings.add(1); //error
+listOfStrings.add("a");
+listOfStrings.add("b");
+listOfStrings.add("c");
+listOfStrings.add("d");
+listOfStrings.add("e");
 
-console.log(test);
+console.log(listOfStrings);
 
-//test.addToPosition(3, "f");
-test.addAll(["l", "m", "n"]);
-console.log(test);
-console.log(test.contains("ž"));
-test.removeFromIndex(2);
-console.log(test);
+//listOfStrings.addToPosition(3, "f");
+listOfStrings.addAll(["l", "m", "n"]);
+console.log(listOfStrings);
+console.log(listOfStrings.contains("ž"));
+listOfStrings.removeFromIndex(2);
+console.log(listOfStrings);
 
 
 /*
