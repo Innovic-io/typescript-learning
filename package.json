@@ -4,9 +4,8 @@
   "scripts": {
     "start": "ts-node ./src/variables.ts && ts-node ./src/functional.programming.ts",
     "run": "ts-node ./src/arrow.function.ts",
-    "test": "ts-node ./src/car/app.ts",
+    "test": "ts-node ./src/**/helper.spec.ts",
     "prototype": "ts-node ./src/car/prototype.ts",
-    "posttest": "ts-node ./src/phone/app.ts",
     "generics": "ts-node ./src/generics/generic.types.ts"
   },
   "devDependencies": {
