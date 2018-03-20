@@ -21,8 +21,10 @@ that exists in a shared scope, or as the property of an object being
 passed between scopes. A shared scope can include global scope or 
 closure scopes
 
-Immutability: An immutable object is an object that can’t be
-modified after it’s created. 
+Immutability: when the passed state of the given object is not changed
+but instead a new object is created
+the return of the function is always a new object: not the one from
+the function's arg
 
 Side effect: is any application state change that is observable outside 
 the called function other than its return value (logging to console, 
