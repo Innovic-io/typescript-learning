@@ -7,7 +7,8 @@
     "test": "ts-node ./src/**/helper.spec.ts",
     "prototype": "ts-node ./src/car/prototype.ts",
     "generics": "ts-node ./src/generics/generic.types.ts",
-    "iterators": "ts-node ./src/iterators/iterators.ts"
+    "iterators": "ts-node ./src/iterators/iterators.ts",
+    "equalcomparisons": "ts-node ./src/namespaces/strict.and.typeconverting.operators.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
