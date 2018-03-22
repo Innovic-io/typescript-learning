@@ -1,4 +1,4 @@
-import {College} from './college.namespace.classes';
+import { College } from './college.namespace.classes';
 
 const s1 = new College.Student("Marko Markovic", 1, [College.chemistry, College.math]);
 
