@@ -9,15 +9,16 @@
     "generics": "ts-node ./src/generics/generic.types.ts",
     "iterators": "ts-node ./src/iterators/iterators.ts",
     "namespaces": "ts-node ./src/namespaces/college.namespace.app.ts",
-    "decorators": "ts-node ./src/decorators/app.ts"
+    "decorators": "ts-node ./src/decorators/app.ts",
+    "aboutjson": "ts-node ./src/json/about.json.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
     "@types/node": "^9.4.7",
-    "chai": "^4.1.2",
-    "mocha": "^5.0.4",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"
   }
 }
+
+
