@@ -89,7 +89,7 @@ const objects = [{
 /*
 const output = {
   "_id": "s152d15eg",
-  "type": "Room",
+  "type": "Chair",
   "RoomType": {
     "_id": "9988777766",
     "type": "RoomType",
@@ -154,9 +154,10 @@ function objectParse() {
         const _id = objects[i]["relationships"][j]._id;
 
         const object = objects.find((value) => value.type === type && value._id === _id);
-        objects[object.type] = object;
+        objects[i][object.type] = object;
       }
     }
+    delete objects[i].relationships;
   }
 }
 
