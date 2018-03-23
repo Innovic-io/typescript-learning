@@ -145,6 +145,7 @@ const output = {
 
 
 function objectParse() {
+  //objects.forEach((value, index2) => {})
   for (let i = 0; i < objects.length; i++) {
 
     if (objects[i].relationships) {
