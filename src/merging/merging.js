@@ -11,3 +11,53 @@ const ouput = [
 ]
 
  */
+const data = require("./data").data;
+
+function removeRepeatedTags(data) {
+    let tags = [], users = [];
+
+    data.forEach(object => {
+            let user = {};
+            object["tags"].forEach(value => {
+                if (!(tags.includes(value))) {
+                    tags.push(value);
+                }
+            });
+
+            user = object;
+            user["tags"] = tags;
+            users.push(user);
+            tags = [];
+        }
+    );
+    return users;
+}
+
+//console.log(removeRepeatedTags(data));
+
+function calculateFriends(data, user) {
+    return data.find(object => object.name === user)
+        .friends.length;
+}
+
+//console.log(calculateFriends(data, "Barber Huff"));
+
+function basicInfo(data) {
+    const people = [];
+    let sentence;
+    data.forEach(object => {
+        if (object.gender === "female") {
+            if (object.married) {
+                sentence = "Mrs. ";
+            } else {
+                sentence = "Ms. ";
+            }
+        } else {
+            sentence = "Mr. ";
+        }
+        people.push(sentence.concat(object.name, " from ", object.address));
+    });
+    return people;
+}
+
+console.log(basicInfo(data));
