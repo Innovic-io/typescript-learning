@@ -10,15 +10,16 @@
     "iterators": "ts-node ./src/iterators/iterators.ts",
     "namespaces": "ts-node ./src/namespaces/college.namespace.app.ts",
     "decorators": "ts-node ./src/decorators/app.ts",
-    "aboutjson": "ts-node ./src/json/about.json.ts"
+    "aboutjson": "ts-node ./src/json/about.json.ts",
+    "linkedlist": "ts-node ./src/linked-lists/app.ts"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/mocha": "^2.2.48",
     "@types/node": "^9.4.7",
     "ts-node": "^5.0.1",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "@types/uuid": "^3.4.3"
+  },
+  "dependencies": {
+    "uuid": "^3.2.1"
   }
 }
-
-

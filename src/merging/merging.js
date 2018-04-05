@@ -14,49 +14,48 @@ const ouput = [
 const data = require("./data").data;
 
 function removeRepeatedTags(data) {
-    let tags = [], users = [];
 
-    data.forEach(object => {
-            let user = {};
-            object["tags"].forEach(value => {
-                if (!(tags.includes(value))) {
-                    tags.push(value);
+    return data.map(object => {
+
+            const tags = [];
+
+            object["tags"].forEach(tag => {
+                if (!(tags.includes(tag))) {
+                    tags.push(tag);
                 }
             });
 
-            user = object;
-            user["tags"] = tags;
-            users.push(user);
-            tags = [];
-        }
-    );
-    return users;
+            return { ...object, tags };
+        });
 }
 
-//console.log(removeRepeatedTags(data));
+// console.log(removeRepeatedTags(data));
 
 function calculateFriends(data, user) {
-    return data.find(object => object.name === user)
-        .friends.length;
+
+    return data.find(object => object.name === user).friends.length;
 }
 
 //console.log(calculateFriends(data, "Barber Huff"));
 
 function basicInfo(data) {
     const people = [];
-    let sentence;
-    data.forEach(object => {
-        if (object.gender === "female") {
-            if (object.married) {
-                sentence = "Mrs. ";
-            } else {
-                sentence = "Ms. ";
-            }
+
+    data.forEach(user => {
+
+        let sentence;
+
+        if (user.gender === "female") {
+            sentence = (user.married) ? 'Mrs.' : 'Ms.';
         } else {
-            sentence = "Mr. ";
+            sentence = "Mr.";
         }
-        people.push(sentence.concat(object.name, " from ", object.address));
+
+       // people.push([sentence, user.name, 'from', user.address].join(' '));
+        people.push(`${sentence} ${user.name} from ${user.address}`);
+        //people.push(sentence.concat(user.name, " from ", user.address));
     });
+
     return people;
 }
 
