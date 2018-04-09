@@ -8,4 +8,5 @@ list.add('third');
 list.add('fourth');
 console.log(list);
 list.remove();
+
 console.log(list);

@@ -8,6 +8,9 @@ list.add('third');
 list.add('fourth');
 list.add('fifth');
 
-console.log(list);
+//console.log(list.getObject(3));
+
+//console.log(list);
 list.remove();
 console.log(list);
+console.log(list.validateBlockChain());

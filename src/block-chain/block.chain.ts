@@ -1,6 +1,6 @@
 import { createHash } from 'crypto';
 import uuid = require('uuid');
-import has = Reflect.has;
+
 export class BlockChain {
 
   private list = [];
@@ -10,29 +10,39 @@ export class BlockChain {
 
     this.list.push({
       'value': value,
-      'previous': this.getLastNode(),
+      'previous': this.getHashOfTheLastNode(this.list[this.list.length - 1]),
       'id': uuid()
     });
   }
 
   public remove() {
-    this.list.splice(this.list.length-1, 1)
+    this.list.splice(this.list.length - 1, 1)
   }
 
-  private getHash(){
-
+  public getBlockChain() {
+    return this.list;
   }
-  private getLastNode(){
+
+  getHashOfTheLastNode(object) {
 
     const hash = createHash("sha256");
+    const stringToHash = (object) ? JSON.stringify(object) : "";
 
-    if(this.list.length === 0){
-
-      return hash.update("")
-    } else {
-      return hash.update(JSON.stringify(this.list[this.list.length-1]));
-    }
+    return hash.update(stringToHash).digest('hex');
   }
 
+  public getObject(index) {
+    return this.list[index];
+  }
+
+  public validateBlockChain() {
+    for (const index in this.list) {
+      const nextObj = this.getObject(parseInt(index, 10) + 1);
+      if (nextObj && (this.getHashOfTheLastNode(this.list[index]) !== nextObj.previous)) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
