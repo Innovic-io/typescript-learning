@@ -11,7 +11,8 @@
     "namespaces": "ts-node ./src/namespaces/college.namespace.app.ts",
     "decorators": "ts-node ./src/decorators/app.ts",
     "aboutjson": "ts-node ./src/json/about.json.ts",
-    "linkedlist": "ts-node ./src/linked-lists/app.ts"
+    "linkedlist": "ts-node ./src/linked-lists/app.ts",
+    "blockchain": "ts-node ./src/block-chain/app.ts"
   },
   "devDependencies": {
     "@types/node": "^9.4.7",
